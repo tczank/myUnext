@@ -17,6 +17,7 @@ fonttheme: professionalfonts
 mainfont: "HaranoAjiMincho-Regular.otf"
 mainfontoptions:
       - BoldFont=HaranoAjiMincho-Bold
+      - ItalicFont=RobotoMono-LightItalic
 sansfont: "NotoSans-Regular"
 monofont: "JetBrainsMono-Regular"
 
@@ -76,6 +77,52 @@ fontsize: 10pt
 
 
 This analysis environment is now documented enough to be saved from breaking upon future software updates
+
+## Feature engineering - Data cleaning
+
+ * Are there `null` entries?
+ * Are there `NaN` entries?
+ * How to deal with them?
+ 
+ * In this case 7 `user_id` were not available
+ * So these entries were deleted
+ * total entries 23242 $\rightarrow$ 23235
+
+## Feature engineering - Data transformation
+
+ * Initially, these are all `objects` (`strings`):
+   1. `log_date`
+   2. `view_start_time`
+   3. `view_end_time`
+   
+ * They were transformed into `datetime`
+ * And new variables were calculated:
+   1. `view_duration(s)`
+   2. `log_date` was divided into `year` `month` and `day`
+
+## Feature overview
+
+|  | `ep_type` | `ep_id`	| `show_id` |	`user_id`	| `log_date` |
+|----- | ------  | ----- | ----- | ---- |-----------|
+|count |	23235 |	23235 |	23235 |	23235 |	23235 |
+|unique |	3 |	7275 | 384 | 999 | 60 |
+|top |	b	| ep5 |	s4 |	uu43 | 2024-03-03 |
+|freq |	13684 |	408 |	2253 |	1226 |	854 |
+
+* There are __7275__ unique _episodes_
+* There are __384__ unique _shows_
+* There are __999__ unique _users_
+* The most popular `episode_type` is b
+* The most popular `episode_id` is `ep00000005`
+* The most popular `show_id` is `s00000004`
+
+# Confirming the problem preliminary conditions
+
+\tableofcontents[currentsection]
+
+## Confirming the problem preliminary conditions
+
+
 
 # Exploratory Data Analysis (EDA)
 

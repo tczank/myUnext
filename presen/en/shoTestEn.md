@@ -78,6 +78,9 @@ fontsize: 10pt
 
 This analysis environment is now documented enough to be saved from breaking upon future software updates
 
+## The Problem?
+
+
 ## Feature engineering - Data cleaning
 
  * Are there `null` entries?
@@ -104,7 +107,7 @@ This analysis environment is now documented enough to be saved from breaking upo
 
 |  | `ep_type` | `ep_id`	| `show_id` |	`user_id`	| `log_date` |
 |----- | ------  | ----- | ----- | ---- |-----------|
-|count |	23235 |	23235 |	23235 |	23235 |	23235 |
+|count |23235 |	23235 |	23235 |	23235 |	23235 |
 |unique |	3 |	7275 | 384 | 999 | 60 |
 |top |	b	| ep5 |	s4 |	uu43 | 2024-03-03 |
 |freq |	13684 |	408 |	2253 |	1226 |	854 |
